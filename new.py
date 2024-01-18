@@ -14,7 +14,9 @@ def embed_message(image, message, char_to_int):
 
     for char in message:
         image[n, m, z] = char_to_int.get(char, 0)
-        n, m, z = n + 1, m + 1, (z + 1) % 3  # Rotate through RGB channels
+       
+ n, m, z = n + 1, m + 1, (z + 1) % 3  
+# Rotate through RGB channels
 
     return image
 
